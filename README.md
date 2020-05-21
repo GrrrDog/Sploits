@@ -9,3 +9,9 @@ Gadget (SSRF) in Oracle JDBC thin driver for Java native deserialization
 
 Requires [ojdbc7.jar](http://www.oracle.com/technetwork/database/features/jdbc/jdbc-drivers-12c-download-1958347.html).
 FakeOracleConnection is a dump empty class that implements OracleConnection interface.
+
+### flex.json
+JSON deserialization RCE PoC for Flexjson (http://flexjson.sourceforge.net/)
+
+### jodd.json
+JSON deserialization RCE PoC for Jodd (https://jodd.org/json/)
